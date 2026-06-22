@@ -147,7 +147,7 @@ export async function generateReply(number, message, contactType, mood = 'neutra
 
   try {
     const response = await groq.chat.completions.create({
-      model: 'llama3-8b-8192',
+      model: 'llama-3.3-70b-versatile',
       messages: [
         { role: 'system', content: systemPrompt },
         ...history,
@@ -189,7 +189,7 @@ export async function extractProjectInfo(history) {
 
   try {
     const res = await groq.chat.completions.create({
-      model: 'llama3-8b-8192',
+      model: 'llama-3.3-70b-versatile',
       messages: [{
         role: 'user',
         content: `Extract project info from conversation. Return ONLY JSON:\n\n${text}\n\n{"projectType":"","purpose":"","pages":"","features":[],"design":"","paidTools":"","timeline":"","budget":"","infoComplete":false}\n\ninfoComplete=true only if projectType+features+3 other fields filled.`,
