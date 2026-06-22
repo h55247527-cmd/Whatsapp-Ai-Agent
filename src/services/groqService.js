@@ -1,4 +1,4 @@
-// s// src/services/groqService.js — v7
+// src/services/groqService.js — v7
 
 import Groq from 'groq-sdk';
 import { getHistory, saveMessage } from '../utils/database.js';
@@ -74,7 +74,7 @@ KNOWLEDGE/TECH QUESTIONS KA JAWAB:
 - MINIMUM 3 points, MAXIMUM 10 points
 - Har point short aur clear — 1-2 lines max
 - No long paragraphs, no unnecessary filler
-- Technical terms simple rakhو
+- Technical terms simple rakho
 - Agar multi-part question ho — sab cover karo points mein
 
 Example:
@@ -269,5 +269,5 @@ infoComplete = true only if projectType + features + at least 5 other fields are
     const raw = res.choices[0]?.message?.content || '{}';
     return JSON.parse(raw.replace(/```json|```/g, '').trim());
   } catch { return null; }
-}rc/services/groqService.js — v6 with Mood + Language + DB Memory
+}
 
